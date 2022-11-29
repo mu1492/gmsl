@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-2.0+
+// SPDX-License-Identifier: GPL-2.0 OR BSD-2-Clause
 /*
  * Maxim MAX96724 Quad GMSL2/1 Deserializer Driver
  *
@@ -929,7 +929,7 @@ static int __maybe_unused max96724_resume
 
 	if( priv->streaming )
 	{
-		ret = max96724_start_streaming( priv );;
+		ret = max96724_start_streaming( priv );
 
 		if( ret )
 		{
@@ -1323,4 +1323,4 @@ module_param_cb( i2c_value_is_word, &param_i2c_value_is_word_ops, &i2c_value_is_
 
 MODULE_DESCRIPTION( "Maxim MAX96724 Quad GMSL2/1 Deserializer Driver" );
 MODULE_AUTHOR( "Analog Devices, Inc." );
-MODULE_LICENSE( "GPL" );
+MODULE_LICENSE( "Dual BSD/GPL" );
